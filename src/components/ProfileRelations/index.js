@@ -1,8 +1,8 @@
-import { ProfileRelationsBox } from "./ProfileRelationsBox";
+import { RelationsBox } from "../RelationsBox";
 
 export const ProfileRelations = ({ pessoasFavoritas }) => {
   return (
-    <ProfileRelationsBox>
+    <RelationsBox>
       <h2 className="smallTitle">
         Pessoas da comunidade ({pessoasFavoritas.length})
       </h2>
@@ -19,6 +19,6 @@ export const ProfileRelations = ({ pessoasFavoritas }) => {
           );
         })}
       </ul>
-    </ProfileRelationsBox>
+    </RelationsBox>
   );
 };

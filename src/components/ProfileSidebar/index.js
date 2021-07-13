@@ -1,8 +1,8 @@
-import Box from "../Box";
+import { Box } from "../Box";
 
 export function ProfileSidebar(props) {
   return (
-    <Box>
+    <Box as="aside">
       <img
         src={`https://github.com/${props.githubUser}.png`}
         style={{ borderRadius: "8px" }}

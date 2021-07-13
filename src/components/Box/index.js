@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Box = styled.div`
+export const Box = styled.div`
   background: #ffffff;
   border-radius: 8px;
 
@@ -58,5 +58,3 @@ const Box = styled.div`
     background-color: #6f92bb;
   }
 `;
-
-export default Box;
