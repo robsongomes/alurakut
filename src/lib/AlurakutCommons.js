@@ -16,7 +16,7 @@ function Link({ href, children, ...props }) {
 // ================================================================================================================
 // Menu
 // ================================================================================================================
-export function AlurakutMenu({ githubUser }) {
+export function AlurakutMenu({ githubUser, onLogout }) {
   const [isMenuOpen, setMenuState] = React.useState(false);
   return (
     <AlurakutMenu.Wrapper isMenuOpen={isMenuOpen}>
@@ -39,7 +39,9 @@ export function AlurakutMenu({ githubUser }) {
         </nav>
 
         <nav>
-          <a href={`/logout`}>Sair</a>
+          <a href="#" onClick={() => onLogout()}>
+            Sair
+          </a>
           <div>
             <input placeholder="Pesquisar no Orkut" />
           </div>

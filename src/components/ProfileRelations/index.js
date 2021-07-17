@@ -1,19 +1,19 @@
 import { RelationsBox } from "../RelationsBox";
 
-export const ProfileRelations = ({ pessoasFavoritas }) => {
+export const ProfileRelations = ({ pessoasFavoritas, title }) => {
   return (
     <RelationsBox>
       <h2 className="smallTitle">
-        Pessoas da comunidade ({pessoasFavoritas.length})
+        {title} ({pessoasFavoritas.length})
       </h2>
 
       <ul>
-        {pessoasFavoritas.map((itemAtual) => {
+        {pessoasFavoritas.slice(0, 6).map((itemAtual) => {
           return (
-            <li key={itemAtual}>
-              <a href={`/users/${itemAtual}`} key={itemAtual}>
-                <img src={`https://github.com/${itemAtual}.png`} />
-                <span>{itemAtual}</span>
+            <li key={itemAtual.login}>
+              <a href={`https://api.github.com/users/${itemAtual.login}`}>
+                <img src={`https://github.com/${itemAtual.login}.png`} />
+                <span>{itemAtual.login}</span>
               </a>
             </li>
           );

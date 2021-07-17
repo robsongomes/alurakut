@@ -7,7 +7,7 @@ export function ComunidadesForm({ onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ id: new Date().toISOString(), title, image });
+    onSubmit({ title, imageurl: image });
     setTitle("");
     setImage("");
   };
@@ -20,6 +20,7 @@ export function ComunidadesForm({ onSubmit }) {
           <input
             placeholder="Qual vai ser o nome da sua comunidade?"
             value={title}
+            required
             onChange={(e) => setTitle(e.target.value)}
             aria-label="Qual vai ser o nome da sua comunidade?"
             type="text"
@@ -30,6 +31,7 @@ export function ComunidadesForm({ onSubmit }) {
             type="url"
             placeholder="Coloque uma URL para usarmos de capa"
             value={image}
+            required
             onChange={(e) => setImage(e.target.value)}
             aria-label="Coloque uma URL para usarmos de capa"
           />

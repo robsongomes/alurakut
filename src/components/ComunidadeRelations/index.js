@@ -11,8 +11,8 @@ export const ComunidadeRelations = ({ comunidadesFavoritas }) => {
         {comunidadesFavoritas.slice(0, 6).map((comunidade) => {
           return (
             <li key={comunidade.id}>
-              <a href={`/users/${comunidade.title}`}>
-                <img src={comunidade.image} />
+              <a href={`/users/${comunidade.id}`}>
+                <img src={comunidade.imageurl} />
                 <span>{comunidade.title}</span>
               </a>
             </li>
